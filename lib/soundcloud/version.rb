@@ -1,3 +1,3 @@
-module Groupon
+module Soundcloud
   VERSION = "0.0.1"
 end

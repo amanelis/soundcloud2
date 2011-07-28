@@ -1,18 +1,18 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "groupon/version"
+require "soundcloud/version"
 
 Gem::Specification.new do |s|
-  s.name        = "groupon2"
-  s.version     = Groupon::VERSION
+  s.name        = "soundcloud"
+  s.version     = Soundcloud::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Josh Deeden"]
-  s.email       = ["jdeeden@gmail.com"]
+  s.authors     = ["Alex Manelis"]
+  s.email       = ["amanelis@console.fm"]
   s.homepage    = ""
-  s.summary     = %q{A wrapper for the Groupon v2 API}
-  s.description = %q{A wrapper for the Groupon v2 API}
+  s.summary     = %q{A wrapper for the Soundcloud v2 API}
+  s.description = %q{A wrapper for the Soundcloud v2 API}
 
-  s.rubyforge_project = "groupon2"
+  s.rubyforge_project = "soundcloud2"
   s.add_development_dependency('rake', '~> 0.8')
   s.add_development_dependency('rspec', '~> 2.5')
   s.add_development_dependency('simplecov', '~> 0.4')
