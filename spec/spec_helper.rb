@@ -10,14 +10,4 @@ require 'rubygems'
 require 'rspec'
 require 'vcr'
 
-VCR.config do |c|
-  c.cassette_library_dir = 'spec/cassettes'
-  c.stub_with                :typhoeus
-  c.default_cassette_options = { :record => :new_episodes }
-end
-
-RSpec.configure do |c|
-  c.extend VCR::RSpec::Macros
-end
-
-API_KEY=""
+API_KEY = "734a173874da8c420aeb59fd03623454"

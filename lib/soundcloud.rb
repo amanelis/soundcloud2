@@ -19,10 +19,15 @@ module Soundcloud
         builder.use Faraday::Response::Mashify
       end
     end
+    
+    def tracks(options)
+      response = conn.get("/tracks.json?q=#{options}&client_id=#{api_key}")
+      response.inspect
+    end
 
     def method_missing(sym, *args, &block)
       options = args.extract_options!.merge(:client_id => api_key)
-      response = conn.get("/v2/#{sym.to_s}/#{args[0]}") { |req| req.params = options  }
+      response = conn.get("#{sym.to_s}.json?") { |req| req.params = options  }
       args[0].nil? ? response.body.send(sym) : response.body.send(sym.to_s.chop)
     end
   end
