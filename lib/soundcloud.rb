@@ -7,8 +7,6 @@ module Soundcloud
   class Client
     attr_reader :api_key, :conn
 
-    # Initialize the client.
-    # TODO:  Document.
     def initialize(*args)
       options = args.extract_options!
       @api_key = args[0]
@@ -20,9 +18,10 @@ module Soundcloud
       end
     end
     
-    def tracks(options)
-      response = conn.get("/tracks.json?q=#{options}&client_id=#{api_key}")
-      response.inspect
+    def tracks(*args)
+      options = args.extract_options!.merge(:client_id => api_key)
+      response = conn.get("/tracks.json") { |req| req.params = options }
+      args[0].nil? ? response : nil
     end
 
     def method_missing(sym, *args, &block)

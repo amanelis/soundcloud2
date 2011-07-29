@@ -8,7 +8,7 @@ describe Soundcloud::Client do
     end
     
     it "should respond to deals" do
-      data = @client.tracks("skrillex")
+      data = @client.tracks(:q => 'skrillex')
       puts data.inspect
     end
   end
