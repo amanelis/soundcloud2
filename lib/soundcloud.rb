@@ -18,6 +18,54 @@ module Soundcloud
       end
     end
     
+    # PROPERTIES OF GROUPS API
+    # id	integer ID	123
+    # uri	API resource URL	http://api.soundcloud.com/comments/32562
+    # created_at	timestamp of creation	"2009/08/13 18:30:10 +0000"
+    # permalink	permalink of the resource	"summer-of-69"
+    # permalink_url	URL to the SoundCloud.com page	"http://soundcloud.com/bryan/summer-of-69"
+    # artwork_url	URL to a JPEG image	"http://i1.sndcdn.com/a....-large.jpg?142a848"
+    # name	name of the group	"Field Recordings"
+    # description	description of the group	"field recordings from across the world"
+    # short_description	short description of the group	"field recordings!"
+    # creator	mini user representation of the owner	{id: 343, username: "Doctor Wilson"...}
+    def groups(*args)
+      super
+    end
+    
+    # PROPERTIES OF PLAYLISTS API
+    # id	integer ID	123
+    # created_at	timestamp of creation	"2009/08/13 18:30:10 +0000"
+    # user-id	user-id of the owner	343
+    # user	mini user representation of the owner	{id: 343, username: "Doctor Wilson"...}
+    # title	track title	"Summer of 69"
+    # permalink	permalink of the resource	"summer-of-69"
+    # permalink_url	URL to the SoundCloud.com page	"http://soundcloud.com/bryan/summer-of-69"
+    # uri	API resource URL	"http://api.soundcloud.com/tracks/123"
+    # sharing	public/private sharing	"public"
+    # purchase_url	external purchase link	"http://amazon.com/buy/a43aj0b03"
+    # artwork_url	URL to a JPEG image	"http://i1.sndcdn.com/a....-large.jpg?142a848"
+    # description	HTML description	"my first track"
+    # downloadable	downloadable (boolean)	false
+    # streamable	streamable via API (boolean)	true
+    # label	label mini user object	{id:123, username: "BeatLabel"...}
+    # duration	duration in milliseconds	1203400
+    # genre	genre	"HipHop"
+    # shared_to_count	number of sharings (if private)	45
+    # tag_list	list of tags	"tag1 \"hip hop\" geo:lat=32.444 geo:lon=55.33"
+    # label_id	id of the label user	54677
+    # label_name	label name	"BeatLabel"
+    # license	creative common license	"no-rights-reserved"
+    # release	release number	3234
+    # release_day	day of the release	21
+    # release_month	month of the release	5
+    # release_year	year of the release	2001
+    # ean	EAN identifier for the playlist	"123-4354345-43"
+    # playlist_type	playlist type	"recording"
+    def playlists(*args)
+      super
+    end
+    
     # PROPERTIES OF TRACKS API
     # id	integer ID	123
     # created_at	timestamp of creation	"2009/08/13 18:30:10 +0000"
