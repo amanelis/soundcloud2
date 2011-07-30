@@ -7,8 +7,8 @@ describe Soundcloud::Client do
       @client = Soundcloud::Client.new(@api_key)
     end
     
-    it "should respond to deals" do
-      data = @client.tracks(:q => 'skrillex')
+    it ".users" do
+      data = @client.users(:q => 'skrillex')
       puts data.inspect
     end
   end
