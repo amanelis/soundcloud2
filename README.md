@@ -33,6 +33,12 @@ The client should be instantiated with a single api_key that you can obtain from
     client.tracks(:q => 'A New World', :bpm => 120)
     client.tracks(:id => 1647583)
     client.tracks(:genre => 'dubstep', :downloadable => true)
+    client.tracks(:genre => 'dubstep', :order => 'hotness')
+    
+### USERS
+    client.users(:id => 47194613)
+    client.users(:city => 'greece', :description => 'badass')
+    client.users(:username => 'djzaxx')
 
 Install dependencies using bundler  
     $ bundle 
