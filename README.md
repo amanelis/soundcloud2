@@ -6,7 +6,9 @@ Simple Ruby wrapper for the Soundcloud API.
 
 The humble beginnings of a Soundcloud API client.   [`Hashie::Mash`](https://github.com/intridea/hashie) objects, providing a handy hash that supports dot notation:
 
-    client.users(:q => 'Skrillex').first.city
+This library is very sparse for the beginnings, it has the four basic methods on the Soundcloud API, GROUPS, PLAYLISTS, TRACKS, and USERS. The Put, Post methods are coming soon.
+
+    client.users(:q => 'skrillex').first.city
     => "melbourne"
     client.tracks(:q => 'A new world').first.permalink
     => "babiixj-into-a-new-world"
