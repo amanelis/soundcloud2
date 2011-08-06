@@ -6,46 +6,40 @@ Simple Ruby wrapper for the Soundcloud API.
 
 The humble beginnings of a Soundcloud API client.   [`Hashie::Mash`](https://github.com/intridea/hashie) objects, providing a handy hash that supports dot notation:
 
-    client.users(:q => 'skrillex').city
+    client.users(:q => 'Skrillex').first.city
     => "melbourne"
-    client.tracks(:q => 'A new world').permalink
+    client.tracks(:q => 'A new world').first.permalink
     => "babiixj-into-a-new-world"
 
 ## Usage
 
 ### Instantiate
-The client should be instantiated with a single api_key that you can attain from this url: http://soundcloud.com/you/apps/new
+The client should be instantiated with a single api_key that you can obtain from this url: http://soundcloud.com/you/apps/new
 
-    require 'rad_widget'
-    client = Wantsa::Client.new(:username => "9f2c5cb0-abcd-012e-fe5f-12313b12f8a6",
-                                :password => "9f12bb30-abcd-012e-fe55-12313b12f8a6",
-                                :ca_path => "/System/Library/OpenSSL")
+    client = Soundcloud::Client.new('YOUR_SOUNDCLOUD_API_KEY')
 
-To locate your SSL certificate folder, type openssl version -a. You should see a response similar to  
+### GROUPS
+    client.groups(:name => 'Field Recordings')
+    client.groups(:description => 'field recordings from across the world')
+    client.groups(:q => 'dubstep')
 
-    OpenSSL 0.9.8o 01 Jun 2010
-    built on: Thu Feb 10 01:47:31 UTC 2011
-    platform: debian-amd64
-    options:  bn(64,64) md2(int) rc4(ptr,char) des(idx,cisc,16,int) blowfish(ptr2) 
-    compiler: cc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -m64 -DL_ENDIAN -DTERMIO -O3 -Wa,--noexecstack -g -Wall -DMD32_REG_T=int -DOPENSSL_BN_ASM_MONT -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM
-    OPENSSLDIR: "/usr/lib/ssl"
+### PLAYLISTS
+    client.playlists(:title => 'Summer of 69', :sharing => 'public', :downloadable => 'false')
+    client.playlists(:q => 'crunk house')
 
-
-### Get top 50 deals
-    client.deals
-
-## Tests
-
-### Running
+### TRACKS
+    client.tracks(:q => 'A New World', :bpm => 120)
+    client.tracks(:id => 1647583)
+    client.tracks(:genre => 'dubstep', :downloadable => true)
 
 Install dependencies using bundler  
     $ bundle 
 
 Run rSpec  
-    $ rspec -fp spec
+    $ rspec -fp spec/client
 
 ## Issues
-  Jira.  
+  None.  
 
 <a name="changelog"></a>
 ## Changelog
@@ -69,4 +63,4 @@ Run rSpec
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-Copyright (c) 2011 [Josh Deeden](http://twitter.com/jdeeden). 
+Copyright (c) 2011 [Alex Manelis](http://twitter.com/amanelis). 

@@ -7,8 +7,13 @@ describe Soundcloud::Client do
       @client = Soundcloud::Client.new(@api_key)
     end
     
-    it ".users" do
-      data = @client.users(:q => 'skrillex')
+    it ".groups" do
+      data = @client.groups(:q => 'dubstep')
+      puts data.inspect
+    end
+    
+    it ".playlists" do
+      data = @client.playlists(:q => 'dubstep')
       puts data.inspect
     end
     
@@ -16,5 +21,11 @@ describe Soundcloud::Client do
       data = @client.tracks(:q => 'A new world')
       puts data.inspect
     end
+    
+    it ".users" do
+      data = @client.users(:q => 'skrillex')
+      puts data.inspect
+    end
+    
   end
 end
