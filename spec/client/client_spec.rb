@@ -11,5 +11,10 @@ describe Soundcloud::Client do
       data = @client.users(:q => 'skrillex')
       puts data.inspect
     end
+    
+    it ".tracks" do
+      data = @client.tracks(:q => 'A new world')
+      puts data.inspect
+    end
   end
 end

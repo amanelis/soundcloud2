@@ -4,17 +4,17 @@ Simple Ruby wrapper for the Soundcloud API.
 
 ## Overview
 
-The humble beginnings of a Wantsa API client.   [`Hashie::Mash`](https://github.com/intridea/hashie) objects, providing a handy hash that supports dot notation:
+The humble beginnings of a Soundcloud API client.   [`Hashie::Mash`](https://github.com/intridea/hashie) objects, providing a handy hash that supports dot notation:
 
-    deal.business.name
-    => "Hooters"
-    deal.type
-    => "Purchase"
+    client.users(:q => 'skrillex').city
+    => "melbourne"
+    client.tracks(:q => 'A new world').permalink
+    => "babiixj-into-a-new-world"
 
 ## Usage
 
 ### Instantiate
-The client should be instantiated with a username, password, and location to the SSL certificates directory.
+The client should be instantiated with a single api_key that you can attain from this url: http://soundcloud.com/you/apps/new
 
     require 'rad_widget'
     client = Wantsa::Client.new(:username => "9f2c5cb0-abcd-012e-fe5f-12313b12f8a6",
