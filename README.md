@@ -52,7 +52,7 @@ Run rSpec
 <a name="changelog"></a>
 ## Changelog
 
-### 0.0.1 - May 5, 2011
+### 0.0.1 - Aug 6th, 2011
 
 * Initial version
 
