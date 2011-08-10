@@ -56,16 +56,17 @@ be found in the other subclassed modules.
     user.user_favorites('4201929', '1931470')
     user.user_groups('4201929')
 
-Install dependencies using bundler  
-    $ bundle 
 
-Run rSpec  
+## Dependencies
+#### Install dependencies using bundler  
+    $ bundle
+  
+#### Run rSpec  
     $ rspec -fp spec/client
 
 ## Issues
-  None.  
+  The queries on any /user/:id/:resource/:id are not functioning properly when you add a second :id argument to the method calls.
 
-<a name="changelog"></a>
 ## Changelog
 
 ### 0.0.1 - Aug 6th, 2011
