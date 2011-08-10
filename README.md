@@ -43,18 +43,28 @@ be found in the other subclassed modules.
 ## More Advanced Modules
 
 ### Soundcloud::Users Module
-    user = Soundcloud::Users.new('YOUR_SOUNDCLOUD_API_KEY')
-    user.user('4201929')
-    user.user_tracks('4201929')
-    user.user_playlists('4201929')
-    user.user_followings('4201929')
-    user.user_followings('4201929', '1931470')
-    user.user_followers('4201929')
-    user.user_followers('4201929', '1931470')
-    user.user_comments('4201929')
-    user.user_favorites('4201929')
-    user.user_favorites('4201929', '1931470')
-    user.user_groups('4201929')
+    u = Soundcloud::Users.new('YOUR_SOUNDCLOUD_API_KEY')
+    u.user('4201929')
+    u.user_tracks('4201929')
+    u.user_playlists('4201929')
+    u.user_followings('4201929')
+    u.user_followings('4201929', '1931470')
+    u.user_followers('4201929')
+    u.user_followers('4201929', '1931470')
+    u.user_comments('4201929')
+    u.user_favorites('4201929')
+    u.user_favorites('4201929', '1931470')
+    u.user_groups('4201929')
+    
+### Soundcloud::Tracks Module
+    t = Soundcloud::Tracks.new('YOUR_SOUNDCLOUD_API_KEY')
+    t.tracks('20296934')
+    t.tracks_comments('20296934')
+    t.tracks_comments('20296934', '23145109')
+    t.tracks_favoriters('20296934')
+    t.tracks_favoriters('20296934', '2769794')
+    t.tracks_shared_to_users('20296934')
+    t.tracks_shared_to_emails('20296934')
 
 
 ## Dependencies
