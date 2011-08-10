@@ -13,10 +13,12 @@ This library is very sparse for the beginnings, it has the four basic methods on
     client.tracks(:q => 'A new world').first.permalink
     => "babiixj-into-a-new-world"
 
-## Usage
+## Quick Simple Client Usage
 
-### Instantiate
+### Instantiate the simple Client
 The client should be instantiated with a single api_key that you can obtain from this url: http://soundcloud.com/you/apps/new
+Note the client is a quick way to consume and search the soundcloud API. More advanced methods can
+be found in the other subclassed modules.
 
     client = Soundcloud::Client.new('YOUR_SOUNDCLOUD_API_KEY')
 
@@ -39,6 +41,11 @@ The client should be instantiated with a single api_key that you can obtain from
     client.users(:id => 47194613)
     client.users(:city => 'greece', :description => 'badass')
     client.users(:username => 'djzaxx')
+    
+## More Advanced Modules
+
+### Soundcloud::Users Module
+
 
 Install dependencies using bundler  
     $ bundle 
