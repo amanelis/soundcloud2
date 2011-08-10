@@ -1,12 +1,17 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
 describe Soundcloud::Client do
-  context "api" do
+  context "Client" do
     before(:all) do
       @api_key = "734a173874da8c420aeb59fd03623454"
       @client = Soundcloud::Client.new(@api_key)
     end
-    
+
+    it ".initialize" do
+      puts @client.api_key
+      puts @client.inspect
+    end
+  
     it ".groups" do
       data = @client.groups(:q => 'dubstep')
       puts data.inspect
@@ -26,6 +31,5 @@ describe Soundcloud::Client do
       data = @client.users(:q => 'skrillex')
       puts data.inspect
     end
-    
   end
 end

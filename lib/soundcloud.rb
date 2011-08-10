@@ -146,4 +146,10 @@ module Soundcloud
       args.nil? ? response.body.send(sym) : response.body
     end
   end
+  
+  autoload :Comments,   "soundcloud/comments"
+  autoload :Groups,     "soundcloud/groups"
+  autoload :Playlists,  "soundcloud/playlists"
+  autoload :Tracks,     "soundcloud/tracks"
+  autoload :Users,      "soundcloud/users"
 end
