@@ -65,7 +65,7 @@ be found in the other subclassed modules.
     $ rspec -fp spec/client
 
 ## Issues
-  The queries on any /user/:id/:resource/:id are not functioning properly when you add a second :id argument to the method calls.
+  The queries on any /user/:id/:resource/:id.json are not functioning properly when you add a second :id argument to the method calls.
 
 ## Changelog
 
