@@ -65,6 +65,12 @@ be found in the other subclassed modules.
     t.tracks_favoriters('20296934', '2769794')
     t.tracks_shared_to_users('20296934')
     t.tracks_shared_to_emails('20296934')
+    
+### Soundcloud::Playlists Module
+    p = Soundcloud::Playlists.new('YOUR_SOUNDCLOUD_API_KEY')
+    p.playlists('920731')
+    p.playlists_shared_to_users('4201929')
+    p.playlists_shared_to_emails('amanelis@gmail.com')
 
 
 ## Dependencies

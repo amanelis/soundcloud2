@@ -7,7 +7,7 @@ describe Soundcloud::Users do
     end
 
     it ".initialize" do
-      puts "TESTING: initialize"
+      puts "TESTING: .initialize"
       puts @users.api_key
       puts @users.inspect
     end

@@ -7,7 +7,7 @@ describe Soundcloud::Tracks do
     end
     
     it ".initialize" do
-      puts "TESTING: initialize"
+      puts "TESTING: .initialize"
       puts @tracks.api_key
       puts @tracks.inspect
     end
