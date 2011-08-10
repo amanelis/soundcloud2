@@ -3,10 +3,9 @@ require File.expand_path('../../spec_helper', __FILE__)
 describe Soundcloud::Users do
   context "Users" do
     before(:all) do
-      @api_key = "734a173874da8c420aeb59fd03623454"
-      @user = Soundcloud::Users.new(@api_key)
+      @user = Soundcloud::Users.new(API_KEY)
     end
-    
+
     it ".initialize" do
       puts "TESTING: initialize"
       puts @user.api_key
@@ -31,13 +30,13 @@ describe Soundcloud::Users do
     it ".user_followings" do
       puts "TESTING: .user_followings"
       puts @user.user_followings('4201929')
-    end
-    
+    end 
+
     it ".user_followings/:id" do
       puts "TESTING: .user_followings/:id"
       puts @user.user_followings('4201929', '1931470')
     end
-    
+ 
     it ".user_followers" do
       puts "TESTING: .user_followers"
       puts @user.user_followers('4201929')

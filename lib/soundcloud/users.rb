@@ -1,8 +1,3 @@
-require 'faraday'
-require 'faraday_middleware'
-require 'core_ext/array'
-require 'yajl'
-
 module Soundcloud
   class Users < Client
     attr_reader :api_key, :conn

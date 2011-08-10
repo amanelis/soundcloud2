@@ -3,8 +3,7 @@ require File.expand_path('../../spec_helper', __FILE__)
 describe Soundcloud::Client do
   context "Client" do
     before(:all) do
-      @api_key = "734a173874da8c420aeb59fd03623454"
-      @client = Soundcloud::Client.new(@api_key)
+      @client = Soundcloud::Client.new(API_KEY)
     end
 
     it ".initialize" do
