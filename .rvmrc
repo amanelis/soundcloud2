@@ -1,1 +1,2 @@
-ruby-1.9.2@soundcloud
+rvm 1.9.2
+rvm gemset use soundcloud
