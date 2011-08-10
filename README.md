@@ -4,14 +4,12 @@ Simple Ruby wrapper for the Soundcloud API.
 
 ## Overview
 
-The humble beginnings of a Soundcloud API client.   [`Hashie::Mash`](https://github.com/intridea/hashie) objects, providing a handy hash that supports dot notation:
-
-This library is very sparse for the beginnings, it has the four basic methods on the Soundcloud API, GROUPS, PLAYLISTS, TRACKS, and USERS. The Put, Post methods are coming soon.
+This library contains two types of consumption. First there is the Soundcloud::Client (Simple Client), which offers the four basic methods to search the Soundcloud API via GROUPS, PLAYLISTS, TRACKS, and USERS. Then there are the subclass modules that extend more of the advanced API calls on the main 4 resources that Soundcloud offers. Here is a quick example of the Soundcloud::Client module notation:
 
     client.users(:q => 'skrillex').first.city
     => "melbourne"
     client.tracks(:q => 'A new world').first.permalink
-    => "babiixj-into-a-new-world"
+    => "a-new-world"
 
 ## Quick Simple Client Usage
 
@@ -45,7 +43,18 @@ be found in the other subclassed modules.
 ## More Advanced Modules
 
 ### Soundcloud::Users Module
-
+    user = Soundcloud::Users.new('YOUR_SOUNDCLOUD_API_KEY')
+    user.user('4201929')
+    user.user_tracks('4201929')
+    user.user_playlists('4201929')
+    user.user_followings('4201929')
+    user.user_followings('4201929', '1931470')
+    user.user_followers('4201929')
+    user.user_followers('4201929', '1931470')
+    user.user_comments('4201929')
+    user.user_favorites('4201929')
+    user.user_favorites('4201929', '1931470')
+    user.user_groups('4201929')
 
 Install dependencies using bundler  
     $ bundle 
