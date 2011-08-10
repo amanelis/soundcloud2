@@ -56,8 +56,6 @@ be found in the other subclassed modules.
     user.user_favorites('4201929', '1931470')
     user.user_groups('4201929')
 
-##
-
 Install dependencies using bundler  
     $ bundle 
 
