@@ -71,6 +71,19 @@ be found in the other subclassed modules.
     p.playlists('920731')
     p.playlists_shared_to_users('4201929')
     p.playlists_shared_to_emails('amanelis@gmail.com')
+    
+### Soundcloud::Groups Module
+    g = Soundcloud::Groups.new('YOUR_SOUNDCLOUD_API_KEY')
+    g.groups('11440')
+    g.groups_moderators('11440')
+    g.groups_members('11440')
+    g.groups_contributors('11440')
+    g.groups_users('11440')
+    g.groups_tracks('11440')
+    
+### Soundcloud::Comments Module
+    c = Soundcloud::Comments.new('YOUR_SOUNDCLOUD_API_KEY')
+    c.comments('23145109')
 
 
 ## Dependencies
