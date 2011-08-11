@@ -3,12 +3,12 @@ $:.push File.expand_path("../lib", __FILE__)
 require "soundcloud/version"
 
 Gem::Specification.new do |s|
-  s.name        = "soundcloud"
+  s.name        = "soundcloud2"
   s.version     = Soundcloud::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Alex Manelis"]
   s.email       = ["amanelis@console.fm"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/amanelis/soundcloud2"
   s.summary     = %q{A wrapper for the Soundcloud v2 API}
   s.description = %q{A wrapper for the Soundcloud v2 API}
 
