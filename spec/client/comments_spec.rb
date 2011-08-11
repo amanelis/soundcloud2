@@ -1,9 +1,9 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
-describe Soundcloud::Comments do
+describe Soundcloud2::Comments do
   context "Comments" do
     before(:all) do
-      @comments = Soundcloud::Comments.new(API_KEY)
+      @comments = Soundcloud2::Comments.new(API_KEY)
     end
 
     it ".initialize" do

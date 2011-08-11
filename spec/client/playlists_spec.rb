@@ -1,9 +1,9 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
-describe Soundcloud::Playlists do
+describe Soundcloud2::Playlists do
   context "Playlists" do
     before(:all) do
-      @playlists = Soundcloud::Playlists.new(API_KEY)
+      @playlists = Soundcloud2::Playlists.new(API_KEY)
     end
 
     it ".initialize" do

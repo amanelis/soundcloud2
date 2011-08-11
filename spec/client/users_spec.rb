@@ -1,9 +1,9 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
-describe Soundcloud::Users do
+describe Soundcloud2::Users do
   context "Users" do
     before(:all) do
-      @users = Soundcloud::Users.new(API_KEY)
+      @users = Soundcloud2::Users.new(API_KEY)
     end
 
     it ".initialize" do

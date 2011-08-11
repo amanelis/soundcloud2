@@ -3,7 +3,7 @@ require 'faraday_middleware'
 require 'core_ext/array'
 require 'yajl'
 
-module Soundcloud
+module Soundcloud2
   class Client
     attr_reader :api_key, :conn
 

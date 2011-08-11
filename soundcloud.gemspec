@@ -4,7 +4,7 @@ require "soundcloud/version"
 
 Gem::Specification.new do |s|
   s.name        = "soundcloud2"
-  s.version     = Soundcloud::VERSION
+  s.version     = Soundcloud2::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Alex Manelis"]
   s.email       = ["amanelis@console.fm"]

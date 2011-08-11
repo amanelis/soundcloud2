@@ -1,4 +1,4 @@
-module Soundcloud
+module Soundcloud2
   class Playlists < Client
     attr_reader :api_key, :conn
 

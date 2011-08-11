@@ -1,9 +1,9 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
-describe Soundcloud::Groups do
+describe Soundcloud2::Groups do
   context "Groups" do
     before(:all) do
-      @groups = Soundcloud::Groups.new(API_KEY)
+      @groups = Soundcloud2::Groups.new(API_KEY)
     end
 
     it ".initialize" do
