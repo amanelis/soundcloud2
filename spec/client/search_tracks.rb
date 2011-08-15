@@ -32,7 +32,7 @@ describe Soundcloud2::Client do
         puts "Favorites: #{s.favoritings_count}"
         puts "https://api.soundcloud.com/tracks/#{s.id}/stream?client_id=281bf78db858fb70bf8ccef48976dde4"
         puts "*********************************************************************************************"
-        puts
+        puts s.inspect
       end
 
     end
