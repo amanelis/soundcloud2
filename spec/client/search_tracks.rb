@@ -11,28 +11,22 @@ describe Soundcloud2::Client do
       puts "---------------------------------------------------------"
       puts "Soundcloud::Client.new(API_KEY).tracks(:q => 'Song title')"
       results = Array.new
-      results << @client.tracks(:q => 'Skrillex - Do Da Oliphant')
-      results << @client.tracks(:q => 'Kryder K2')
-      results << @client.tracks(:q => 'Ry Legit - Woody (CLIP)')
-      results << @client.tracks(:q => 'Oblivion Feat. Ashley Merges - Bass Freq (Oblivion VIP) [FREE DOWNLOAD]')
-      results << @client.tracks(:q => 'Kayla ft. Lil Jon - Step On It (Proper Villains remix)')
-      results << @client.tracks(:q => 'Supreme - The Fortress (P0GMAN Remix) (CLIP) [FORTHCOMING BADMAN DIGITAL]')
-      results << @client.tracks(:q => 'Dubsidia & Balkansky - Annoying Dog (Original Mix) DEMO Play Me Records')
+      results << @client.tracks(:q => 'Skrillex - Do Da Oliphant', :order => 'hotness')
+      results << @client.tracks(:q => 'Kryder K2', :order => 'hotness')
+      results << @client.tracks(:q => 'Ry Legit - Woody (CLIP)', :order => 'hotness')
+      results << @client.tracks(:q => 'Oblivion Feat. Ashley Merges - Bass Freq (Oblivion VIP) [FREE DOWNLOAD]', :order => 'hotness')
+      results << @client.tracks(:q => 'Kayla ft. Lil Jon - Step On It (Proper Villains remix)', :order => 'hotness')
+      results << @client.tracks(:q => 'Supreme - The Fortress (P0GMAN Remix) (CLIP) [FORTHCOMING BADMAN DIGITAL]', :order => 'hotness')
+      results << @client.tracks(:q => 'Dubsidia & Balkansky - Annoying Dog (Original Mix) DEMO Play Me Records', :order => 'hotness')
       
       results.each do |r|
         s = r.first
         
         puts "Song Title: #{s.title}"
         puts "Song id: #{s.id}"
-        puts "Genre: #{s.genre}"
-        puts "Slug: #{s.permalink}"
-        puts "Comments: #{s.comment_count}"
-        puts "Downloads: #{s.download_count}"
         puts "Playbacks: #{s.playback_count}"
-        puts "Favorites: #{s.favoritings_count}"
         puts "https://api.soundcloud.com/tracks/#{s.id}/stream?client_id=281bf78db858fb70bf8ccef48976dde4"
         puts "*********************************************************************************************"
-        puts s.inspect
       end
 
     end
