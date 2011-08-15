@@ -36,5 +36,6 @@ describe Soundcloud2::Client do
       data = @client.users(:q => 'skrillex')
       puts data.inspect
     end
+
   end
 end
