@@ -42,6 +42,35 @@ be found in the other subclassed modules.
     
 ## More Advanced Modules
 
+### Soundcloud::Comments Module
+    c = Soundcloud::Comments.new('YOUR_SOUNDCLOUD_API_KEY')
+    c.comments('23145109')
+
+### Soundcloud::Groups Module
+    g = Soundcloud::Groups.new('YOUR_SOUNDCLOUD_API_KEY')
+    g.groups('11440')
+    g.groups_moderators('11440')
+    g.groups_members('11440')
+    g.groups_contributors('11440')
+    g.groups_users('11440')
+    g.groups_tracks('11440')
+
+### Soundcloud::Playlists Module
+    p = Soundcloud::Playlists.new('YOUR_SOUNDCLOUD_API_KEY')
+    p.playlists('920731')
+    p.playlists_shared_to_users('4201929')
+    p.playlists_shared_to_emails('amanelis@gmail.com')
+
+### Soundcloud::Tracks Module
+    t = Soundcloud::Tracks.new('YOUR_SOUNDCLOUD_API_KEY')
+    t.tracks('20296934')
+    t.tracks_comments('20296934')
+    t.tracks_comments('20296934', '23145109')
+    t.tracks_favoriters('20296934')
+    t.tracks_favoriters('20296934', '2769794')
+    t.tracks_shared_to_users('20296934')
+    t.tracks_shared_to_emails('20296934')
+
 ### Soundcloud::Users Module
     u = Soundcloud::Users.new('YOUR_SOUNDCLOUD_API_KEY')
     u.user('4201929')
@@ -55,36 +84,6 @@ be found in the other subclassed modules.
     u.user_favorites('4201929')
     u.user_favorites('4201929', '1931470')
     u.user_groups('4201929')
-    
-### Soundcloud::Tracks Module
-    t = Soundcloud::Tracks.new('YOUR_SOUNDCLOUD_API_KEY')
-    t.tracks('20296934')
-    t.tracks_comments('20296934')
-    t.tracks_comments('20296934', '23145109')
-    t.tracks_favoriters('20296934')
-    t.tracks_favoriters('20296934', '2769794')
-    t.tracks_shared_to_users('20296934')
-    t.tracks_shared_to_emails('20296934')
-    
-### Soundcloud::Playlists Module
-    p = Soundcloud::Playlists.new('YOUR_SOUNDCLOUD_API_KEY')
-    p.playlists('920731')
-    p.playlists_shared_to_users('4201929')
-    p.playlists_shared_to_emails('amanelis@gmail.com')
-    
-### Soundcloud::Groups Module
-    g = Soundcloud::Groups.new('YOUR_SOUNDCLOUD_API_KEY')
-    g.groups('11440')
-    g.groups_moderators('11440')
-    g.groups_members('11440')
-    g.groups_contributors('11440')
-    g.groups_users('11440')
-    g.groups_tracks('11440')
-    
-### Soundcloud::Comments Module
-    c = Soundcloud::Comments.new('YOUR_SOUNDCLOUD_API_KEY')
-    c.comments('23145109')
-
 
 ## Dependencies
 #### Install dependencies using bundler  
