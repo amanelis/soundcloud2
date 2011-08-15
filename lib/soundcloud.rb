@@ -11,9 +11,9 @@ module Soundcloud2
       options = args.extract_options!
       @api_key = args[0]
       @conn = Faraday.new(:url => "https://api.soundcloud.com/") do |builder|
-        builder.adapter Faraday.default_adapter
-        builder.use Faraday::Response::ParseJson
         builder.use Faraday::Response::Mashify
+        builder.use Faraday::Response::ParseJson
+        builder.adapter Faraday.default_adapter
       end
     end
     
