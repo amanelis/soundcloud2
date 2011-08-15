@@ -138,9 +138,9 @@ module Soundcloud2
     end
   end
   
-  autoload :Comments,   "soundcloud/comments"
-  autoload :Groups,     "soundcloud/groups"
-  autoload :Playlists,  "soundcloud/playlists"
-  autoload :Tracks,     "soundcloud/tracks"
-  autoload :Users,      "soundcloud/users"
+  autoload :Comments,   "soundcloud2/comments"
+  autoload :Groups,     "soundcloud2/groups"
+  autoload :Playlists,  "soundcloud2/playlists"
+  autoload :Tracks,     "soundcloud2/tracks"
+  autoload :Users,      "soundcloud2/users"
 end

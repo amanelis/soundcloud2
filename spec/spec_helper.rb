@@ -1,7 +1,7 @@
 require 'simplecov'
 
 SimpleCov.start do
-  add_group 'Soundcloud', 'lib/soundcloud2'
+  add_group 'Soundcloud2', 'lib/soundcloud2'
   add_group 'Specs', 'spec'
 end
 
