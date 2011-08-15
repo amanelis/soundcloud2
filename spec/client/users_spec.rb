@@ -66,5 +66,6 @@ describe Soundcloud2::Users do
       puts "TESTING: .users_groups"
       puts @users.users_groups('4201929')
     end
+
   end
 end
