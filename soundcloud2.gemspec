@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "soundcloud/version"
+require "soundcloud2/version"
 
 Gem::Specification.new do |s|
   s.name        = "soundcloud2"
