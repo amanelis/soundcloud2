@@ -31,20 +31,6 @@ module Soundcloud2
       args.nil? ? response.body.send(sym) : response.body
     end
     
-    # GET /tracks/{id}/shared-to/users	users who have access to the track
-    def tracks_shared_to_users(*args)
-      options = args.extract_options!.merge(:client_id => api_key)
-      response = conn.get("/tracks/#{args[0]}/shared-to/users.json") { |req| req.params = options }
-      args.nil? ? response.body.send(sym) : response.body     
-    end
-    
-    # GET	/tracks/{id}/shared-to/emails	email addresses who are invited to the track
-    def tracks_shared_to_emails(*args)
-      options = args.extract_options!.merge(:client_id => api_key)
-      response = conn.get("/tracks/#{args[0]}/shared-to/emails.json") { |req| req.params = options }
-      args.nil? ? response.body.send(sym) : response.body     
-    end
-    
     # GET /tracks/{id}/secret-token	secret token of the track
     def tracks_secret_token(*args)
       options = args.extract_options!.merge(:client_id => api_key)

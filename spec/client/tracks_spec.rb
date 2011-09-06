@@ -36,15 +36,5 @@ describe Soundcloud2::Tracks do
       puts "TESTING: .tracks_favoriters/:id"
       puts @tracks.tracks_favoriters('20296934', '2769794')      
     end
-    
-    it ".tracks_shared_to_users" do
-      puts "TESTING: .tracks_shared_to_users"
-      puts @tracks.tracks_shared_to_users('20296934')
-    end
-    
-    it ".tracks_shared_to_emails" do
-      puts "TESTING: .tracks_shared_to_emails"
-      puts @tracks.tracks_shared_to_emails('20296934')
-    end
   end
 end
