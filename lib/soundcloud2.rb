@@ -28,7 +28,9 @@ module Soundcloud2
     # description	description of the group	"field recordings from across the world"
     # short_description	short description of the group	"field recordings!"
     # creator	mini user representation of the owner	{id: 343, username: "Doctor Wilson"...}
-    def groups(*args); super; end
+    def groups(*args)
+      super
+    end
     
     # PROPERTIES OF PLAYLISTS API
     # id	integer ID	123
@@ -59,7 +61,9 @@ module Soundcloud2
     # release_year	year of the release	2001
     # ean	EAN identifier for the playlist	"123-4354345-43"
     # playlist_type	playlist type	"recording"
-    def playlists(*args); super; end
+    def playlists(*args)
+      super
+    end
     
     # PROPERTIES OF TRACKS API
     # id	integer ID	123
@@ -106,7 +110,9 @@ module Soundcloud2
     # asset_data	binary data of the audio file	(only for uploading)
     # artwork_data	binary data of the artwork image	(only for uploading)
     # user_favorite	track favorite of current user (boolean, authenticated requests only)	1
-    def tracks(*args); super; end
+    def tracks(*args)
+      super
+    end
     
     # PROPERTIES OF USERS API
     # id	integer ID	123
@@ -129,7 +135,9 @@ module Soundcloud2
     # followers_count	number of followers	54
     # followings_count	number of followed users	75
     # public_favorites_count	number of favorited public tracks	7
-    def users(*args); super; end
+    def users(*args)
+      super
+    end
 
     def method_missing(sym, *args, &block)
       options = args.extract_options!.merge(:client_id => api_key)
