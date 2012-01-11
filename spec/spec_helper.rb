@@ -11,3 +11,8 @@ require 'rspec'
 require 'vcr'
 
 API_KEY = "734a173874da8c420aeb59fd03623454"
+
+RSpec.configure do |config|
+  config.color_enabled = true
+  config.tty = true
+end

@@ -13,7 +13,7 @@ describe Soundcloud2::Comments do
     end
     
     it ".groups" do
-      puts "TESTING: .groups"
+      puts "TESTING: .comments"
       puts @comments.comments('23145109')
     end
 
