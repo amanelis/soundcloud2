@@ -101,6 +101,9 @@ be found in the other subclassed modules.
 
 * Initial version
 
+### 0.3.3 - April 4th, 2012
+
+* Rebuilt the specs to test for nil objects
 
 ## Under the hood
 * [`Faraday`](https://github.com/technoweenie/faraday) REST client
