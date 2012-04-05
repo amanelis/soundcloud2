@@ -90,7 +90,7 @@ be found in the other subclassed modules.
     $ bundle
   
 #### Run rSpec  
-    $ rspec -fp spec/client
+    $ rspec spec/
 
 ## Issues
   None.
