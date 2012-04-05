@@ -7,39 +7,31 @@ describe Soundcloud2::Groups do
     end
 
     it ".initialize" do
-      puts "TESTING: .initialize"
-      puts @groups.api_key
-      puts @groups.inspect
+      @groups.api_key.should == API_KEY
     end
     
     it ".groups" do
-      puts "TESTING: .groups"
-      puts @groups.groups('11440')
+      @groups.groups('11440').should_not_be_nil
     end
     
     it ".groups_moderators" do
-      puts "TESTING: .groups_moderators"
-      puts @groups.groups_moderators('11440')
+      @groups.groups_moderators('11440').first.should_not_be_nil
     end
     
     it ".groups_members" do
-      puts "TESTING: .groups_members"
-      puts @groups.groups_members('11440')
+      @groups.groups_members('11440').first.should_not_be_nil
     end
     
     it ".groups_contributors" do
-      puts "TESTING: .groups_contributors"
-      puts @groups.groups_contributors('11440')
+      @groups.groups_contributors('11440').first.should_not_be_nil
     end
     
     it ".groups_users" do
-      puts "TESTING: .groups_users"
-      puts @groups.groups_users('11440')
+      @groups.groups_users('11440').first.should_not_be_nil
     end
     
     it ".groups_tracks" do
-      puts "TESTING: .groups_tracks"
-      puts @groups.groups_tracks('11440')
+      @groups.groups_tracks('11440').first.should_not_be_nil
     end
 
   end

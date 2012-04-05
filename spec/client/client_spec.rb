@@ -7,34 +7,23 @@ describe Soundcloud2::Client do
     end
 
     it ".initialize" do
-      puts "TESTING: .api_key"
-      puts "TESTING: .inspect"
-      puts @client.api_key
-      puts @client.inspect
+      @client.api_key.should == API_KEY
     end
   
     it ".groups" do
-      puts "TESTING: .groups"
-      data = @client.groups(:q => 'dubstep')
-      puts data.inspect
+      @client.groups(:q => 'dubstep').first.should_not_be_nil
     end
     
     it ".playlists" do
-      puts "TESTING: .playlists"
-      data = @client.playlists(:q => 'dubstep')
-      puts data.inspect
+      @client.playlists(:q => 'dubstep').first.should_not_be_nil
     end
     
     it ".tracks" do
-      puts "TESTING: .tracks"
-      data = @client.tracks(:q => 'A new world')
-      puts data.inspect
+      @client.tracks(:q => 'A new world').first.should_not_be_nil
     end
     
     it ".users" do
-      puts "TESTING: .users"
-      data = @client.users(:q => 'skrillex')
-      puts data.inspect
+      @client.users(:q => 'skrillex').first.should_not_be_nil
     end
 
   end

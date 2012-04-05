@@ -7,15 +7,11 @@ describe Soundcloud2::Comments do
     end
 
     it ".initialize" do
-      puts "TESTING: .initialize"
-      puts @comments.api_key
-      puts @comments.inspect
-    end
-    
-    it ".groups" do
-      puts "TESTING: .comments"
-      puts @comments.comments('23145109')
+      @comments.api_key.should == API_KEY
     end
 
+    it ".groups" do
+      @comments.comments('23145109').should_not_be_nil
+    end
   end
 end

@@ -7,34 +7,27 @@ describe Soundcloud2::Tracks do
     end
     
     it ".initialize" do
-      puts "TESTING: .initialize"
-      puts @tracks.api_key
-      puts @tracks.inspect
+      @tracks.api_key.should == API_KEY
     end
     
     it ".tracks" do
-      puts "TESTING: .tracks"
-      puts @tracks.tracks('20296934')
+      @tracks.tracks('20296934').should_not_be_nil
     end
     
     it ".tracks_comments" do
-      puts "TESTING: .tracks_comments"
-      puts @tracks.tracks_comments('20296934')
+      @tracks.tracks_comments('20296934').first.should_not_be_nil
     end
     
     it ".tracks_comments/:id" do
-      puts "TESTING: .tracks_comments/:id"
-      puts @tracks.tracks_comments('20296934', '23145109')
+      @tracks.tracks_comments('20296934', '23145109').should_not_be_nil
     end
     
     it ".tracks_favoriters" do
-      puts "TESTING: .tracks_favoriters"
-      puts @tracks.tracks_favoriters('20296934')      
+      @tracks.tracks_favoriters('20296934').first.should_not_be_nil
     end
     
     it ".tracks_favoriters/:id" do
-      puts "TESTING: .tracks_favoriters/:id"
-      puts @tracks.tracks_favoriters('20296934', '2769794')      
+      @tracks.tracks_favoriters('20296934', '2769794').should_not_be_nil
     end
   end
 end

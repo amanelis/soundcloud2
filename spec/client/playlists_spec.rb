@@ -7,24 +7,19 @@ describe Soundcloud2::Playlists do
     end
 
     it ".initialize" do
-      puts "TESTING: .initialize"
-      puts @playlists.api_key
-      puts @playlists.inspect
+      @playlists.api_key.should == API_KEY
     end
     
     it ".playlists" do 
-      puts "TESTING: .playlists"
-      puts @playlists.playlists('920731')
+      @playlists.playlists('920731').should_not_be_nil
     end
     
     it ".playlists_shared_to_users" do
-      puts "TESTING: .playlists_shared_to_users"
-      puts @playlists.playlists_shared_to_users('4201929')
+      @playlists.playlists_shared_to_users('4201929').should_not_be_nil
     end
     
     it ".playlists_shared_to_emails" do
-      puts "TESTING: .playlists_shared_to_emails"
-      puts @playlists.playlists_shared_to_emails('amanelis')
+      @playlists.playlists_shared_to_emails('amanelis').should_not_be_nil
     end
 
   end
