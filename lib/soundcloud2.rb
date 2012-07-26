@@ -16,7 +16,7 @@ module Soundcloud2
         builder.adapter Faraday.default_adapter
       end
     end
-    
+
     # PROPERTIES OF GROUPS API
     # id	integer ID	123
     # uri	API resource URL	http://api.soundcloud.com/comments/32562
@@ -31,7 +31,7 @@ module Soundcloud2
     def groups(*args)
       super
     end
-    
+
     # PROPERTIES OF PLAYLISTS API
     # id	integer ID	123
     # created_at	timestamp of creation	"2009/08/13 18:30:10 +0000"
@@ -64,7 +64,7 @@ module Soundcloud2
     def playlists(*args)
       super
     end
-    
+
     # PROPERTIES OF TRACKS API
     # id	integer ID	123
     # created_at	timestamp of creation	"2009/08/13 18:30:10 +0000"
@@ -113,7 +113,7 @@ module Soundcloud2
     def tracks(*args)
       super
     end
-    
+
     # PROPERTIES OF USERS API
     # id	integer ID	123
     # permalink	permalink of the resource	"summer-of-69"
@@ -145,7 +145,7 @@ module Soundcloud2
       args.nil? ? response.body.send(sym) : response.body
     end
   end
-  
+
   autoload :Comments,   "soundcloud2/comments"
   autoload :Groups,     "soundcloud2/groups"
   autoload :Playlists,  "soundcloud2/playlists"
