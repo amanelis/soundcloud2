@@ -96,7 +96,7 @@ be found in the other subclassed modules.
   None.
   
 ## Build Testing
-  We use Travis to test our builds after each push. Check our .travis.yml file for 
+  We use Travis to test our builds after each push. Check our .travis.yml file for supported versions of Ruby.
   
 ## Changelog
 
