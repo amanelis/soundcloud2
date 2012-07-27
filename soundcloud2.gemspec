@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('hashie', '~> 1.1.0')
   s.add_runtime_dependency('yajl-ruby', '~> 0.8.1')
   s.add_runtime_dependency('multi_json', '~> 1.0.3')
-  # s.add_runtime_dependency('multi_json', '~> 0.0.2')
   
 
   s.files         = `git ls-files`.split("\n")
