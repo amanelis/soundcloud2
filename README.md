@@ -95,6 +95,9 @@ be found in the other subclassed modules.
 ## Issues
   None.
   
+## Build Testing
+  We use Travis to test our builds after each push.
+  
 ## Changelog
 
 ### 0.0.1 - Aug 6th, 2011
