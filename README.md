@@ -90,13 +90,13 @@ be found in the other subclassed modules.
     $ bundle
   
 #### Run rSpec  
-    $ rspec spec/
+    $ rspec spec
 
 ## Issues
   None.
   
 ## Build Testing
-  We use Travis to test our builds after each push.
+  We use Travis to test our builds after each push. Check our .travis.yml file for 
   
 ## Changelog
 
