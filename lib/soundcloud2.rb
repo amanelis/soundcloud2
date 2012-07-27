@@ -19,16 +19,15 @@ module Soundcloud2
 
     ## initialize
     #
-    # @param: Hash[:api_key] - required
+    # @param: String[api_key] - required
     # @return: 
     #
     # Setups up our attr readers and most importantly the Faraday connection
     # to the API.
     #
     # OPTIMIZE: eventually take out Faraday and move to NetHTTP for a lower level of control
-    def initialize(*args)
-      options = args.extract_options!
-      @api_key = args[0]
+    def initialize(api_key)
+      @api_key = api_key
       @conn = Faraday.new(:url => "https://api.soundcloud.com/") do |builder|
         builder.use Faraday::Response::Mashify
         builder.use Faraday::Response::ParseJson

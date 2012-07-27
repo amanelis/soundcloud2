@@ -13,7 +13,7 @@ module Soundcloud2
 		end
 
 		def method_missing(sym, *args, &block)
-	    options 	= args.extract_options!.merge(client_id: api_key)
+	    options 	= args.extract_options!.merge(:client_id => api_key)
       response 	= conn.get("/#{sym.to_s}/#{args[0]}.json") { |req| req.params = options }
       args.nil? ? response.body.send(sym) : response.body
 		end
