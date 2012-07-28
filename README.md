@@ -98,6 +98,8 @@ be found in the other subclassed modules.
 ## Build Testing
   We use Travis to test our builds after each push. Check our .travis.yml file for supported versions of Ruby.
   
+  [![Build Status](https://secure.travis-ci.org/amanelis/soundcloud2.png)](http://travis-ci.org/amanelis/soundcloud2)
+  
 ## Changelog
 
 ### 0.0.1 - Aug 6th, 2011
