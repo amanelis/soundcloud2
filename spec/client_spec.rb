@@ -9,7 +9,7 @@ describe Soundcloud2::Client do
     it ".initialize" do
       @client.api_key.should == API_KEY
     end
-  
+
     it ".groups" do
       @client.groups(:q => 'dubstep').first.should_not_be_nil
     end

@@ -16,6 +16,9 @@ module Soundcloud2
   # @attr: @conn - here is the main method we use to call http methods from
   class Client
     attr_reader :api_key, :conn
+    
+    # Define a few helper methods that are not too important
+    #
 
     ## initialize
     #
