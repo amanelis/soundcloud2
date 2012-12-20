@@ -1,6 +1,8 @@
 # Soundcloud2 API Client
 [![Build Status](https://secure.travis-ci.org/amanelis/soundcloud2.png)](http://travis-ci.org/amanelis/soundcloud2)
 
+[![Dependency Status](https://gemnasium.com/amanelis/soundcloud2.png)](https://gemnasium.com/amanelis/soundcloud2)
+
 Simple Ruby wrapper for the Soundcloud API.  
 
 ## Overview
