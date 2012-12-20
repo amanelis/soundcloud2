@@ -15,7 +15,7 @@ describe Soundcloud2::Tracks do
     end
     
     it ".tracks_comments" do
-      @tracks.tracks_comments('20296934').first.should_not_be_nil
+      @tracks.tracks_comments('20296934').should_not_be_nil
     end
     
     it ".tracks_comments/:id" do
@@ -23,7 +23,7 @@ describe Soundcloud2::Tracks do
     end
     
     it ".tracks_favoriters" do
-      @tracks.tracks_favoriters('20296934').first.should_not_be_nil
+      @tracks.tracks_favoriters('20296934').should_not_be_nil
     end
     
     it ".tracks_favoriters/:id" do
