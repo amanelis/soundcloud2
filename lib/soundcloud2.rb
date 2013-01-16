@@ -4,7 +4,6 @@ require 'core_ext/array'
 require 'yajl'
 
 module Soundcloud2
-  
   ### Client
   #
   # Brings together a default class we use to setup our connection
