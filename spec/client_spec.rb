@@ -17,7 +17,6 @@ describe Soundcloud2::Client do
     subject { @client.api_key }
     
     context 'when calling the #api_key method' do
-      it { should_not be_nil }
       it { should eq(API_KEY) }
     end
   end
