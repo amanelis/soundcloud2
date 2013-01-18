@@ -1,60 +1,106 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
 describe Soundcloud2::Users do
-  context "Users" do
-    before(:all) do
-      @users  = Soundcloud2::Users.new(API_KEY)
-      @diplo  = {:id => '16730'} 
-      @djzaxx = {:id => '4201929'}
-      @tiesto = {:id => '108842'}
+  before(:all) do
+    @users  = Soundcloud2::Users.new(API_KEY)
+    @diplo  = {:id => '16730'} 
+    @djzaxx = {:id => '4201929'}
+    @tiesto = {:id => '108842'}
+  end
+  
+  describe '#initialize' do
+    subject { @users.api_key }
+    
+    context 'when initialized with a valid API_KEY' do
+      it { should_not be_nil }
     end
+  end
+  
+  describe '#users' do
+    subject { @users.users(@djzaxx[:id]) }
+    
+    context 'when called with a valid user' do
+      it { should_not be_nil }
+    end
+  end
+  
+  describe '#users_tracks' do
+    subject { @users.users_tracks(@djzaxx[:id]).first }
+    
+    context 'when called with a valid user' do
+      it { should_not be_nil }
+    end
+  end
+  
+  describe '#users_playlists' do
+    subject { @users.users_playlists(@diplo[:id]).first }
+    
+    context 'when called with a valid user' do
+      it { should_not be_nil }
+    end
+  end
+  
+  describe '#users_followings' do
+    subject { @users.users_followings(@djzaxx[:id]).first }
+    
+    context 'when called with a valid user' do
+      it { should_not be_nil }
+    end
+  end
 
-    it ".initialize" do
-      @users.api_key.should == API_KEY
-    end
+  describe '#users_followings/:id' do
+    subject { @users.users_followings(@djzaxx[:id], @tiesto[:id]) }
     
-    it ".users" do
-      @users.users(@djzaxx[:id]).should_not_be_nil
+    context 'when called with a valid user and a second valid user' do
+      it { should_not be_nil }
     end
+  end 
+  
+  describe '#users_followers' do
+    subject { @users.users_followers(@djzaxx[:id]).first }
     
-    it ".users_tracks" do
-      @users.users_tracks(@djzaxx[:id]).first.should_not_be_nil
+    context 'when called with a valid user' do
+      it { should_not be_nil }
     end
+  end 
+  
+  describe '#users_followers/:id' do
+    subject { @users.users_followers(@djzaxx[:id], @tiesto[:id]) }
     
-    it ".users_playlists" do
-      @users.users_playlists(@diplo[:id]).first.should_not_be_nil
+    context 'when called with a valid user and a second valid user' do
+      it { should_not be_nil }
     end
+  end
+  
+  describe '#users_comments' do
+    subject { @users.users_comments(@djzaxx[:id]).first }
     
-    it ".users_followings" do
-      @users.users_followings(@djzaxx[:id]).first.should_not_be_nil
-    end 
+    context 'when called with a valid user' do
+      it { should_not be_nil }
+    end
+  end
+  
+  describe '#users_favorites' do
+    subject { @users.users_favorites(@djzaxx[:id]).first }
+    
+    context 'when called with a valid user' do
+      it { should_not be_nil }
+    end
+  end
 
-    it ".users_followings/:id" do
-      @users.users_followings(@djzaxx[:id], @tiesto[:id]).should_not_be_nil
-    end
- 
-    it ".users_followers" do
-      @users.users_followers(@djzaxx[:id]).first.should_not_be_nil
-    end
+  describe '#users_favorites/:id' do
+    subject { @users.users_favorites(@djzaxx[:id], @tiesto[:id]) }
     
-    it ".users_followers/:id" do
-      @users.users_followers(@djzaxx[:id], @tiesto[:id]).should_not_be_nil
+    context 'when called with a valid user and a second valid user' do
+      it { should_not be_nil }
     end
+  end
+
+  describe '#users_groups' do
+    subject { @users.users_groups(@djzaxx[:id]).first }
     
-    it ".users_comments" do
-      @users.users_comments(@djzaxx[:id]).first.should_not_be_nil
-    end
-    
-    it ".users_favorites" do
-      @users.users_favorites(@djzaxx[:id]).first.should_not_be_nil
-    end
-    
-    it ".users_favorites/:id" do
-      @users.users_favorites(@djzaxx[:id], @tiesto[:id]).should_not_be_nil
-    end
-    
-    it ".users_groups" do
-      @users.users_groups(@djzaxx[:id]).first.should_not_be_nil
+    context 'when called with a valid user' do
+      it { should_not be_nil }
     end
   end
 end

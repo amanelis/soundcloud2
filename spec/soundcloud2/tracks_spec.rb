@@ -1,33 +1,55 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
 describe Soundcloud2::Tracks do
-  context "Tracks" do
-    before(:all) do
-      @tracks = Soundcloud2::Tracks.new(API_KEY)
-    end
+  before(:all) do
+    @tracks = Soundcloud2::Tracks.new(API_KEY)
+  end
     
-    it ".initialize" do
-      @tracks.api_key.should == API_KEY
-    end
+  describe '#initialize' do
+    subject { @tracks.api_key }
     
-    it ".tracks" do
-      @tracks.tracks('20296934').should_not_be_nil
+    context 'when initialized with a valid API_KEY' do
+      it { should_not be_nil }
     end
+  end  
+  
+  describe '#tracks' do
+    subject { @tracks.tracks('20296934') }
     
-    it ".tracks_comments" do
-      @tracks.tracks_comments('20296934').should_not_be_nil
+    context 'when called with a valid track_id' do
+      it { should_not be_nil }
     end
+  end
+  
+  describe '#tracks_comments' do
+    subject { @tracks.tracks_comments('20296934') }
     
-    it ".tracks_comments/:id" do
-      @tracks.tracks_comments('20296934', '23145109').should_not_be_nil
+    context 'when called with a valid track_id' do
+      it { should_not be_nil }
     end
+  end
+  
+  describe '#tracks_comments/:id' do
+    subject { @tracks.tracks_comments('20296934', '23145109') }
     
-    it ".tracks_favoriters" do
-      @tracks.tracks_favoriters('20296934').should_not_be_nil
+    context 'when called with a valid track_id and comment_id' do
+      it { should_not be_nil }
     end
+  end
+  
+  describe '#tracks_favoriters/:id' do
+    subject { @tracks.tracks_favoriters('20296934', '2769794') }
     
-    it ".tracks_favoriters/:id" do
-      @tracks.tracks_favoriters('20296934', '2769794').should_not_be_nil
+    context 'when called with a valid track_id user_id' do
+      it { should_not be_nil }
+    end
+  end
+  
+  describe '#tracks_favoriters' do
+    subject { @tracks.tracks_favoriters('20296934') }
+    
+    context 'when called with a valid track_id' do
+      it { should_not be_nil }
     end
   end
 end
