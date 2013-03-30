@@ -19,16 +19,15 @@ Gem::Specification.new do |s|
   s.add_development_dependency('yard')
   s.add_development_dependency('maruku')
   s.add_development_dependency('spork')
-  
+
   s.add_runtime_dependency('faraday')
   s.add_runtime_dependency('faraday_middleware')
   s.add_runtime_dependency('hashie')
   s.add_runtime_dependency('yajl-ruby')
   s.add_runtime_dependency('multi_json')
-  
 
-  s.files         = `git ls-files`.split('\n')
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split('\n')
+  s.files         = `git ls-files`.split($\)
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.executables   = `git ls-files -- bin/*`.split('\n').map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 end
