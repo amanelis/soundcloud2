@@ -29,13 +29,13 @@ describe Soundcloud2::Client do
     end
   end
   
-  describe '#playlists' do
-    subject { @client.playlists(:q => 'dubstep').first }
-    
-    context 'when calling the #playlists method' do
-      it { should_not be_nil }
-    end
-  end
+  # describe '#playlists' do
+  #   subject { @client.playlists(:q => 'dubstep').first }
+  #   
+  #   context 'when calling the #playlists method' do
+  #     it { should_not be_nil }
+  #   end
+  # end
   
   describe '#tracks' do
     subject { @client.tracks(:q => 'A new world').first }

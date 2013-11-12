@@ -24,14 +24,6 @@ describe Soundcloud2::Users do
     end
   end
   
-  describe '#users_tracks' do
-    subject { @users.users_tracks(@djzaxx[:id]).first }
-    
-    context 'when called with a valid user' do
-      it { should_not be_nil }
-    end
-  end
-  
   describe '#users_playlists' do
     subject { @users.users_playlists(@diplo[:id]).first }
     
